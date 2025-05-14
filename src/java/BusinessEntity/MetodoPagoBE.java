@@ -9,7 +9,7 @@ package BusinessEntity;
  * @author SISTEMAS
  */
 public class MetodoPagoBE {
-     private String idMetodoPago;
+    private String idMetodoPago;
     private String nombre;
     private String tipo;
     private String proveedor;
