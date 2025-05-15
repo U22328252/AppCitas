@@ -11,7 +11,7 @@ public class CitaBE {
    private String id_medico;
    private String id_local;
    private Date fecha;
-   private Date TIME;
+   private Date hora_inicio;
    private Date hora_fin;
    private String estado;
    private String motivo;  
@@ -19,13 +19,13 @@ public class CitaBE {
     public CitaBE() {
     }
 
-    public CitaBE(String id_cita, String id_paciente, String id_medico, String id_local, Date fecha, Date TIME, Date hora_fin, String estado, String motivo) {
+    public CitaBE(String id_cita, String id_paciente, String id_medico, String id_local, Date fecha, Date hora_inicio, Date hora_fin, String estado, String motivo) {
         this.id_cita = id_cita;
         this.id_paciente = id_paciente;
         this.id_medico = id_medico;
         this.id_local = id_local;
         this.fecha = fecha;
-        this.TIME = TIME;
+        this.hora_inicio = hora_inicio;
         this.hora_fin = hora_fin;
         this.estado = estado;
         this.motivo = motivo;
@@ -71,12 +71,12 @@ public class CitaBE {
         this.fecha = fecha;
     }
 
-    public Date getTIME() {
-        return TIME;
+    public Date gethora_inicio() {
+        return hora_inicio;
     }
 
-    public void setTIME(Date TIME) {
-        this.TIME = TIME;
+    public void sethora_inicio(Date hora_inicio) {
+        this.hora_inicio = hora_inicio;
     }
 
     public Date getHora_fin() {
