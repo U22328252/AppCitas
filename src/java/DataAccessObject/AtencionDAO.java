@@ -94,7 +94,7 @@ public class AtencionDAO extends Conexion implements IBaseDAO<AtencionBE> {
              pst.setString(5, input.getIdAtencion());            
             pst.executeUpdate();
             result = pst.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return result;
@@ -108,7 +108,7 @@ public class AtencionDAO extends Conexion implements IBaseDAO<AtencionBE> {
                     getConexion().prepareStatement("DELETE FROM atencion WHERE id_atencion=?");
             pst.setString(1, input);
             result = pst.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return result;

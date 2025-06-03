@@ -4,7 +4,7 @@
  */
 package BusinessEntity;
 
-import org.apache.tomcat.jni.Time;
+import java.sql.Timestamp;;
 
 /**
  *
@@ -14,14 +14,14 @@ public class DisponibilidadBE {
     private String idDisponibilidad;
     private String idMedicoLocal;
     private String diaSemana;
-    private Time horaInicio;
-    private Time horaFin;
+    private Timestamp horaInicio;
+    private Timestamp horaFin;
     private boolean activo;
 
     public DisponibilidadBE() {
     }
 
-    public DisponibilidadBE(String idDisponibilidad, String idMedicoLocal, String diaSemana, Time horaInicio, Time horaFin, boolean activo) {
+    public DisponibilidadBE(String idDisponibilidad, String idMedicoLocal, String diaSemana, Timestamp horaInicio, Timestamp horaFin, boolean activo) {
         this.idDisponibilidad = idDisponibilidad;
         this.idMedicoLocal = idMedicoLocal;
         this.diaSemana = diaSemana;
@@ -54,19 +54,19 @@ public class DisponibilidadBE {
         this.diaSemana = diaSemana;
     }
 
-    public Time getHoraInicio() {
+    public Timestamp getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Time horaInicio) {
+    public void setHoraInicio(Timestamp horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Time getHoraFin() {
+    public Timestamp getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Time horaFin) {
+    public void setHoraFin(Timestamp horaFin) {
         this.horaFin = horaFin;
     }
 

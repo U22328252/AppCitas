@@ -110,7 +110,7 @@ public class PacienteDAO extends Conexion implements IBaseDAO<PacienteBE>{
             pst.setString(9, input.getId_paciente());
             pst.executeUpdate();
             result = pst.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return result;
@@ -124,7 +124,7 @@ public class PacienteDAO extends Conexion implements IBaseDAO<PacienteBE>{
                     getConexion().prepareStatement("DELETE FROM paciente WHERE id_paciente=?");
             pst.setString(1, input);
             result = pst.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return result;

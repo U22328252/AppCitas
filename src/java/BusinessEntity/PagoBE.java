@@ -4,7 +4,7 @@
  */
 package BusinessEntity;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;;
 
 /**
  *

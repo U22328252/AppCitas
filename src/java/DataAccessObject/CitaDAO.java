@@ -25,7 +25,7 @@ public class CitaDAO extends Conexion implements IBaseDAO<CitaBE> {
         try {
             String sql = "INSERT INTO cita VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
              PreparedStatement stmt = getConexion().prepareStatement(sql);
-            stmt.setString(1, input.getId_cita());
+            stmt.setString(1, UUID.randomUUID().toString());
             stmt.setString(2, input.getId_paciente());
             stmt.setString(3, input.getId_medico());
             stmt.setString(4, input.getId_local());
@@ -111,7 +111,7 @@ public class CitaDAO extends Conexion implements IBaseDAO<CitaBE> {
             stmt.setString(9, input.getId_cita());
             stmt.executeUpdate();
             result = stmt.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return result;
@@ -125,7 +125,7 @@ public class CitaDAO extends Conexion implements IBaseDAO<CitaBE> {
                     getConexion().prepareStatement("DELETE FROM cita WHERE id_cita=?");
             pst.setString(1, input);
             result = pst.execute();
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         return result;
