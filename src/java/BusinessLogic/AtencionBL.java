@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.AtencionBE;
+import DataAccessObject.AtencionDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class AtencionBL implements IBaseBL<AtencionBE> {
 
     @Override
     public boolean Crear(AtencionBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       AtencionDAO atencionDAO = new AtencionDAO();
+         atencionDAO.Crear(input);
+         return true;
     }
 
     @Override
     public AtencionBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         AtencionDAO atencionDAO = new AtencionDAO();
+         return atencionDAO.obtenerPorId(input);         
     }
 
     @Override
     public ArrayList<AtencionBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        AtencionDAO atencionDAO = new AtencionDAO();
+        return atencionDAO.obtenerTodos(); 
     }
 
     @Override
     public boolean Actualizar(AtencionBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         AtencionDAO atencionDAO = new AtencionDAO();
+         atencionDAO.Actualizar(input);
+         return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        AtencionDAO atencionDAO = new AtencionDAO();
+        atencionDAO.Eliminar(input);
+        return true;
     }
     
 }

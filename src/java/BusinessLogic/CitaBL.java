@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.CitaBE;
+import DataAccessObject.CitaDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class CitaBL implements IBaseBL<CitaBE> {
 
     @Override
     public boolean Crear(CitaBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        CitaDAO citaDAO = new CitaDAO();
+        citaDAO.Crear(input);
+        return true;
     }
 
     @Override
     public CitaBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         CitaDAO citaDAO = new CitaDAO();
+         return  citaDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<CitaBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        CitaDAO citaDAO = new CitaDAO();
+         return  citaDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(CitaBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         CitaDAO citaDAO = new CitaDAO();
+        citaDAO.Crear(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         CitaDAO citaDAO = new CitaDAO();
+         citaDAO.Eliminar(input);
+        return true;
     }
     
 }

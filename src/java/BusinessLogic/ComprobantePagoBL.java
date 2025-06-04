@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.ComprobantePagoBE;
+import DataAccessObject.ComprobantePagoDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class ComprobantePagoBL implements IBaseBL<ComprobantePagoBE> {
 
     @Override
     public boolean Crear(ComprobantePagoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ComprobantePagoDAO comprobantePagoDAO = new ComprobantePagoDAO();
+        comprobantePagoDAO.Crear(input);
+        return true;
     }
 
     @Override
     public ComprobantePagoBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ComprobantePagoDAO comprobantePagoDAO = new ComprobantePagoDAO();
+        return comprobantePagoDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<ComprobantePagoBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ComprobantePagoDAO comprobantePagoDAO = new ComprobantePagoDAO();
+        return comprobantePagoDAO.obtenerTodos();   
     }
 
     @Override
     public boolean Actualizar(ComprobantePagoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ComprobantePagoDAO comprobantePagoDAO = new ComprobantePagoDAO();
+        comprobantePagoDAO.Actualizar(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       ComprobantePagoDAO comprobantePagoDAO = new ComprobantePagoDAO();
+        comprobantePagoDAO.Eliminar(input);
+        return true;
     }
     
 }
