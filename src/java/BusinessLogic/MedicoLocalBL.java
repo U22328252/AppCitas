@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.MedicoLocalBE;
+import DataAccessObject.MedicoLocalDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class MedicoLocalBL implements IBaseBL<MedicoLocalBE> {
 
     @Override
     public boolean Crear(MedicoLocalBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MedicoLocalDAO medicoLocalDAO = new MedicoLocalDAO();
+        medicoLocalDAO.Crear(input);
+        return true;
     }
 
     @Override
     public MedicoLocalBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+       MedicoLocalDAO medicoLocalDAO = new MedicoLocalDAO();
+       return medicoLocalDAO.obtenerPorId(input);
+    } 
 
     @Override
     public ArrayList<MedicoLocalBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       MedicoLocalDAO medicoLocalDAO = new MedicoLocalDAO();
+       return medicoLocalDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(MedicoLocalBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MedicoLocalDAO medicoLocalDAO = new MedicoLocalDAO();
+        medicoLocalDAO.Actualizar(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MedicoLocalDAO medicoLocalDAO = new MedicoLocalDAO();
+        medicoLocalDAO.Eliminar(input);
+        return true;
     }
     
 }

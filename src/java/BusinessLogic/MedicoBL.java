@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.MedicoBE;
+import DataAccessObject.MedicoDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class MedicoBL implements IBaseBL<MedicoBE> {
 
     @Override
     public boolean Crear(MedicoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MedicoDAO medicoDAO = new MedicoDAO();
+        medicoDAO.Crear(input);
+        return true;
     }
 
     @Override
     public MedicoBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       MedicoDAO medicoDAO = new MedicoDAO();
+       return medicoDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<MedicoBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       MedicoDAO medicoDAO = new MedicoDAO();
+       return medicoDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(MedicoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MedicoDAO medicoDAO = new MedicoDAO();
+        medicoDAO.Actualizar(input);
+       return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       MedicoDAO medicoDAO = new MedicoDAO();
+       medicoDAO.Eliminar(input);
+       return true;
     }
     
 }

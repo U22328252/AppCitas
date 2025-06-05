@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.MetodoPagoBE;
+import DataAccessObject.MetodoPagoDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class MetodoPagoBL implements IBaseBL<MetodoPagoBE> {
 
     @Override
     public boolean Crear(MetodoPagoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MetodoPagoDAO metodoPagoDAO = new MetodoPagoDAO();
+        metodoPagoDAO.Crear(input);
+        return true;
     }
 
     @Override
     public MetodoPagoBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MetodoPagoDAO metodoPagoDAO = new MetodoPagoDAO();
+        return metodoPagoDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<MetodoPagoBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       MetodoPagoDAO metodoPagoDAO = new MetodoPagoDAO();
+       return metodoPagoDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(MetodoPagoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        MetodoPagoDAO metodoPagoDAO = new MetodoPagoDAO();
+        metodoPagoDAO.Actualizar(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       MetodoPagoDAO metodoPagoDAO = new MetodoPagoDAO();
+        metodoPagoDAO.Eliminar(input);
+       return true;
     }
     
 }

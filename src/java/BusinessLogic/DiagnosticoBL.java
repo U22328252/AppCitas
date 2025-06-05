@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.DiagnosticoBE;
+import DataAccessObject.DiagnosticoDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class DiagnosticoBL implements IBaseBL<DiagnosticoBE> {
 
     @Override
     public boolean Crear(DiagnosticoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        DiagnosticoDAO diagnosticoDAO = new DiagnosticoDAO();
+        diagnosticoDAO.Crear(input);
+        return true;
     }
 
     @Override
     public DiagnosticoBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       DiagnosticoDAO diagnosticoDAO = new DiagnosticoDAO();
+       return diagnosticoDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<DiagnosticoBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       DiagnosticoDAO diagnosticoDAO = new DiagnosticoDAO();
+       return diagnosticoDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(DiagnosticoBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        DiagnosticoDAO diagnosticoDAO = new DiagnosticoDAO();
+        diagnosticoDAO.Actualizar(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        DiagnosticoDAO diagnosticoDAO = new DiagnosticoDAO();
+        diagnosticoDAO.Eliminar(input);
+        return true;
     }
     
 }

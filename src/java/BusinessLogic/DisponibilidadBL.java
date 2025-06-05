@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.DisponibilidadBE;
+import DataAccessObject.DisponibilidadDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,36 @@ public class DisponibilidadBL implements IBaseBL<DisponibilidadBE> {
 
     @Override
     public boolean Crear(DisponibilidadBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        DisponibilidadDAO disponibilidadDAO = new DisponibilidadDAO();
+        disponibilidadDAO.Crear(input);
+        return true;
     }
 
     @Override
     public DisponibilidadBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       DisponibilidadDAO disponibilidadDAO = new DisponibilidadDAO();
+       return disponibilidadDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<DisponibilidadBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       DisponibilidadDAO disponibilidadDAO = new DisponibilidadDAO();
+       return disponibilidadDAO.obtenerTodos();
+      
     }
 
     @Override
     public boolean Actualizar(DisponibilidadBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         DisponibilidadDAO disponibilidadDAO = new DisponibilidadDAO();
+         disponibilidadDAO.Actualizar(input);
+         return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        DisponibilidadDAO disponibilidadDAO = new DisponibilidadDAO();
+        disponibilidadDAO.Eliminar(input);
+        return true;
     }
     
 }

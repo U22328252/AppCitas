@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.EspecialidadBE;
+import DataAccessObject.EspecialidadDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,36 @@ public class EspecialidadBL implements IBaseBL<EspecialidadBE> {
 
     @Override
     public boolean Crear(EspecialidadBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EspecialidadDAO especialidadDAO = new EspecialidadDAO();
+        especialidadDAO.Crear(input);
+        return true;
+        
     }
 
     @Override
     public EspecialidadBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       EspecialidadDAO especialidadDAO = new EspecialidadDAO();
+       return especialidadDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<EspecialidadBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EspecialidadDAO especialidadDAO = new EspecialidadDAO();
+        return especialidadDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(EspecialidadBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        EspecialidadDAO especialidadDAO = new EspecialidadDAO();
+        especialidadDAO.Actualizar(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       EspecialidadDAO especialidadDAO = new EspecialidadDAO();
+       especialidadDAO.Eliminar(input);
+       return true;
     }
     
 }

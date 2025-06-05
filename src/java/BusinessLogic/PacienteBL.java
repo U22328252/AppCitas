@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.PacienteBE;
+import DataAccessObject.PacienteDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class PacienteBL implements IBaseBL<PacienteBE> {
 
     @Override
     public boolean Crear(PacienteBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PacienteDAO pacienteDAO = new PacienteDAO();
+        pacienteDAO.Crear(input);
+        return true;
     }
 
     @Override
     public PacienteBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PacienteDAO pacienteDAO = new PacienteDAO();
+        return pacienteDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<PacienteBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       PacienteDAO pacienteDAO = new PacienteDAO();
+       return pacienteDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(PacienteBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PacienteDAO pacienteDAO = new PacienteDAO();
+        pacienteDAO.Actualizar(input);
+        return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        PacienteDAO pacienteDAO = new PacienteDAO();
+        pacienteDAO.Eliminar(input);
+        return true;
     }
     
 }

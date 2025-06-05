@@ -14,10 +14,15 @@ import java.sql.SQLException;
  * @author SISTEMAS
  */
 public class Conexion {
-     private String StrConxMySQL="jdbc:mysql://vmi2086478.contaboserver.net:3306/sistema_citas";
-    private String StrUserMySQL="usuarioapp";
-    private String StrPassMySQL="FMde13N4X3Lpr";
+//    private String StrConxMySQL="jdbc:mysql://vmi2086478.contaboserver.net:3306/sistema_citas";
+//    private String StrUserMySQL="usuarioapp";
+//    private String StrPassMySQL="FMde13N4X3Lpr";
+//    private Connection conexion; //Null
+    private String StrConxMySQL="jdbc:mysql://localhost/sistema_citas";
+    private String StrUserMySQL="root";
+    private String StrPassMySQL="123546";
     private Connection conexion; //Null
+    
     
     public static void main(String [] args){
         Conexion cn = new Conexion();

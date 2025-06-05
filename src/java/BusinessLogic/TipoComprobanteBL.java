@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.TipoComprobanteBE;
+import DataAccessObject.TipoComprobanteDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class TipoComprobanteBL implements IBaseBL<TipoComprobanteBE> {
 
     @Override
     public boolean Crear(TipoComprobanteBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        TipoComprobanteDAO tipoComprobanteDAO = new TipoComprobanteDAO();
+        tipoComprobanteDAO.Crear(input);
+        return true;
     }
 
     @Override
     public TipoComprobanteBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       TipoComprobanteDAO tipoComprobanteDAO = new TipoComprobanteDAO();
+       return tipoComprobanteDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<TipoComprobanteBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        TipoComprobanteDAO tipoComprobanteDAO = new TipoComprobanteDAO();
+        return tipoComprobanteDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(TipoComprobanteBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        TipoComprobanteDAO tipoComprobanteDAO = new TipoComprobanteDAO();
+        tipoComprobanteDAO.Actualizar(input);
+          return true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       TipoComprobanteDAO tipoComprobanteDAO = new TipoComprobanteDAO();
+        tipoComprobanteDAO.Eliminar(input);
+          return true;
     }
     
 }

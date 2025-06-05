@@ -5,6 +5,7 @@
 package BusinessLogic;
 
 import BusinessEntity.LocalBE;
+import DataAccessObject.LocalDAO;
 import java.util.ArrayList;
 
 /**
@@ -15,27 +16,35 @@ public class LocalBL implements IBaseBL<LocalBE> {
 
     @Override
     public boolean Crear(LocalBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        LocalDAO localDAO = new LocalDAO();
+        localDAO.Crear(input);
+        return true;
     }
 
     @Override
     public LocalBE obtenerPorId(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       LocalDAO localDAO = new  LocalDAO();
+       return localDAO.obtenerPorId(input);
     }
 
     @Override
     public ArrayList<LocalBE> obtenerTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       LocalDAO localDAO = new LocalDAO();
+       return localDAO.obtenerTodos();
     }
 
     @Override
     public boolean Actualizar(LocalBE input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        LocalDAO localDAO = new LocalDAO();
+        localDAO.Actualizar(input);
+        return  true;
     }
 
     @Override
     public boolean Eliminar(String input) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        LocalDAO localDAO = new LocalDAO();
+        localDAO.Eliminar(input);
+        return true;
     }
     
 }
