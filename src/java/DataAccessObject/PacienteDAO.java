@@ -18,6 +18,12 @@ import java.util.ArrayList;
  */
 public class PacienteDAO extends Conexion implements IBaseDAO<PacienteBE>{
 
+    public PacienteDAO() {
+        super();
+    }
+    
+    
+
     @Override
     public boolean Crear(PacienteBE input) {
         boolean result = false;
@@ -44,8 +50,8 @@ public class PacienteDAO extends Conexion implements IBaseDAO<PacienteBE>{
     public PacienteBE obtenerPorId(String input) {
        PacienteBE paciente = new PacienteBE();
         try {
-             PreparedStatement pst = getConexion().prepareStatement("SELECT * FROM paciente WHERE Identificador_externo=?");
-             pst.setString(2, input);
+             PreparedStatement pst = getConexion().prepareStatement("SELECT * FROM paciente WHERE Id_paciente=?");
+             pst.setString(1, input);
              ResultSet rs = pst.executeQuery();
              while (rs.next()) {
                 paciente.setId_paciente(rs.getString("id_paciente"));

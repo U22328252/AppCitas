@@ -18,9 +18,9 @@ public class Conexion {
 //    private String StrUserMySQL="usuarioapp";
 //    private String StrPassMySQL="FMde13N4X3Lpr";
 //    private Connection conexion; //Null
-    private String StrConxMySQL="jdbc:mysql://localhost/sistema_citas";
+    private String StrConxMySQL="jdbc:mysql://localhost:3306/sistema_citas";
     private String StrUserMySQL="root";
-    private String StrPassMySQL="123546";
+    private String StrPassMySQL="123456";
     private Connection conexion; //Null
     
     
