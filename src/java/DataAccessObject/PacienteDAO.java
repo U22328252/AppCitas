@@ -108,7 +108,7 @@ public class PacienteDAO extends Conexion implements IBaseDAO<PacienteBE>{
             pst.setString(1, input.getIdentificador_externo());
             pst.setString(2, input.getNombre());
             pst.setString(3, input.getApellido());
-            pst.setDate(5, (Date) input.getFecha_nacimiento()/*.getTime()*/);
+            pst.setDate(4, (Date) input.getFecha_nacimiento()/* .getTime() */);
             pst.setString(5, input.getSexo());
             pst.setString(6, input.getDireccion());
             pst.setString(7, input.getTelefono());
