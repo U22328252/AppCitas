@@ -62,7 +62,7 @@
                 <tr>
                     <td class="px-4 py-2">
                         <a href="editarPaciente.jsp?accion=UPDATE&id=<%=p.getId_paciente()%>" class="text-blue-600 hover:underline">Editar</a> |
-                        <a href="editarPaciente.jsp?accion=DELETE&id=<%=p.getId_paciente()%>" class="text-red-600 hover:underline" onclick="return confirm('¿Eliminar paciente?')">Eliminar</a>
+                        <a href="listarPacientes.jsp?accion=DELETE&id=<%=p.getId_paciente()%>" class="text-red-600 hover:underline" onclick="return confirm('¿Eliminar paciente?')">Eliminar</a>
                     </td>
                     <td class="px-4 py-2"><%=p.getNombre()%></td>
                     <td class="px-4 py-2"><%=p.getApellido()%></td>
