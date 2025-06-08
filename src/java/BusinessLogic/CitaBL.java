@@ -36,7 +36,7 @@ public class CitaBL implements IBaseBL<CitaBE> {
     @Override
     public boolean Actualizar(CitaBE input) {
          CitaDAO citaDAO = new CitaDAO();
-        citaDAO.Crear(input);
+        citaDAO.Actualizar(input);
         return true;
     }
 
